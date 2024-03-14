@@ -47,7 +47,7 @@ namespace HelloTogglebot
             {
                 // Define the user object for the request
                 DevCycleUser user = new DevCycleUser("a_unique_id");
-                var evalContext = EvaluationContext.Builder().Set("user_id", "a_unique_id"); 
+                var evalContext = EvaluationContext.Builder().Set("user_id", "a_unique_id").Build(); 
                 context.Items["user"] = user;
                 context.Items["ofContext"] = evalContext;
 
