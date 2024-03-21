@@ -52,7 +52,7 @@ public class IndexModel : PageModel
             _ => "Hello! Nice to meet you."
         };
 
-        TogglebotSrc = Wink ? "/images/togglebot-wink.png" : "/images/togglebot.png";
+        TogglebotSrc = Wink ? "/images/togglebot-wink.svg" : "/images/togglebot.svg";
         if (Speed == "surprise")
         {
             TogglebotSrc = "/images/unicorn.svg";
