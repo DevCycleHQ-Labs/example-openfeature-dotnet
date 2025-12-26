@@ -41,7 +41,7 @@ namespace HelloTogglebot
                 .Build();
 
 
-            Api.Instance.SetProvider(client.GetOpenFeatureProvider());
+            await Api.Instance.SetProviderAsync(client.GetOpenFeatureProvider());
             ofClient  = Api.Instance.GetClient();
             ofClient.SetContext(
                 EvaluationContext.Builder().Set("user_id", "api-user").Build());

@@ -40,8 +40,8 @@ public class IndexModel : PageModel
             ? feature.VariationName
             : "Default";
 
-        Wink = await ofClient.GetBooleanValue("togglebot-wink", false, context);
-        Speed = await ofClient.GetStringValue("togglebot-speed", "off", context);
+        Wink = await ofClient.GetBooleanValueAsync("togglebot-wink", false, context);
+        Speed = await ofClient.GetStringValueAsync("togglebot-speed", "off", context);
 
         Message = Speed switch
         {
@@ -58,7 +58,7 @@ public class IndexModel : PageModel
             TogglebotSrc = "/images/unicorn.svg";
         }
 
-        string step = await ofClient.GetStringValue("example-text", "default", context);
+        string step = await ofClient.GetStringValueAsync("example-text", "default", context);
 
         switch (step)
         {

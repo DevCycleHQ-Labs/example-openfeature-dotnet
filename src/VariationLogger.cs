@@ -28,8 +28,8 @@ namespace HelloTogglebot
                 ? features["hello-togglebot"].VariationName
                 : "Default";
             
-            bool wink = await ofClient.GetBooleanValue("togglebot-wink", false);
-            string speed = await ofClient.GetStringValue("togglebot-speed", "off");
+            bool wink = await ofClient.GetBooleanValueAsync("togglebot-wink", false);
+            string speed = await ofClient.GetStringValueAsync("togglebot-speed", "off");
 
             string spinChars = speed == "slow" ? "◟◜◝◞" : "◜◠◝◞◡◟";
             string spinner = speed == "off" ? "○" : spinChars[idx % spinChars.Length].ToString();
